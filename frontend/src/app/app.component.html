@@ -1,48 +1,55 @@
 <div id="page-wraper">
   <!-- Sidebar Menu -->
   <div class="responsive-nav">
-    <i class="fa fa-bars" id="menu-toggle" #menuToggle (click)="toggleNav()"></i>
-    <div id="menu" class="menu" #menu  [ngClass]="{'open': openOrClose === 2 }">
-      <i class="fa fa-times" id="menu-close" #menuClose (click)="closeNav()"></i>
+    <i
+      class="fa fa-bars"
+      id="menu-toggle"
+      #menuToggle
+      (click)="toggleNav()"
+    ></i>
+    <div id="menu" class="menu" #menu [ngClass]="{ open: openOrClose === 2 }">
+      <i
+        class="fa fa-times"
+        id="menu-close"
+        #menuClose
+        (click)="closeNav()"
+      ></i>
       <div class="container">
         <div class="image">
           <a href="#"><img src="assets/images/author-image.jpeg" alt="" /></a>
         </div>
         <div class="author-content">
-          <h4>Reflux Me</h4>
-          <span>Web Designer</span>
+          <h4>Ahmed Khalil</h4>
+          <span>Software Developer</span>
         </div>
         <nav class="main-nav" role="navigation">
           <ul class="main-menu">
             <li><a href="#section1">About Me</a></li>
             <li><a href="#section2">What I’m good at</a></li>
             <li><a href="#section3">My Work</a></li>
-            <li><a href="#section4">Contact Me</a></li>
           </ul>
         </nav>
         <div class="social-network">
           <ul class="soial-icons">
             <li>
-              <a href="https://fb.com/templatemo"
-                ><i class="fa fa-facebook"></i
-              ></a>
+              <a href="#"><i class="fa fa-github"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-hackerrank"></i></a>
             </li>
             <li>
               <a href="#"><i class="fa fa-linkedin"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-dribbble"></i></a>
+              <a href="#"><i class="fa fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-rss"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
             </li>
           </ul>
         </div>
         <div class="copyright-text">
-          <p>Copyright 2019 Reflux Design</p>
+          <p>Copyright {{ date }}</p>
         </div>
       </div>
     </div>
@@ -54,9 +61,7 @@
         <h2>About Me</h2>
         <div class="line-dec"></div>
         <span
-          >This is a Bootstrap v4.2.1 CSS Template for you. Edit and use this
-          layout for your site. Updated on 21 May 2019 for repeated main menu
-          HTML code.</span
+          >Hi, welcome to my webpage, I'm Ahmed Khalil, a software developer who lives in alexandria egypt, my main goal is to grow as a developer and learn something new everyday</span
         >
       </div>
       <div class="left-image-post">

@@ -8,6 +8,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'frontend';
   openOrClose: number = 1
+  date = new Date().getFullYear()
   ngOnInit() {}
   toggleNav() {
     if (this.openOrClose === 1) {
