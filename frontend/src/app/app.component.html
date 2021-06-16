@@ -15,21 +15,14 @@
         (click)="closeNav()"
       ></i>
       <div class="container">
-        <div class="image">
+        <div class="image my-2">
           <a href="#"><img src="assets/images/author-image.jpeg" alt="" /></a>
         </div>
-        <div class="author-content">
+        <div class="author-content my-2">
           <h4>Ahmed Khalil</h4>
           <span>Software Developer</span>
         </div>
-        <nav class="main-nav" role="navigation">
-          <ul class="main-menu">
-            <li><a href="#section1">About Me</a></li>
-            <li><a href="#section2">What I’m good at</a></li>
-            <li><a href="#section3">My Work</a></li>
-          </ul>
-        </nav>
-        <div class="social-network">
+        <div class="social-network my-2">
           <ul class="soial-icons">
             <li>
               <a href="#"><i class="fa fa-github"></i></a>
@@ -48,6 +41,16 @@
             </li>
           </ul>
         </div>
+        <nav class="main-nav my-4" role="navigation">
+          <ul class="main-menu">
+            <li><a href="#section1" (click)="scroll(target1)">About Me</a></li>
+            <li>
+              <a href="#section2" (click)="scroll(target2)">What I’m good at</a>
+            </li>
+            <li><a href="#section3" (click)="scroll(target3)">My Work</a></li>
+          </ul>
+        </nav>
+
         <div class="copyright-text">
           <p>Copyright {{ date }}</p>
         </div>
@@ -55,34 +58,27 @@
     </div>
   </div>
 
-  <section class="section about-me" data-section="section1">
+  <section class="section about-me" data-section="section1" #target1>
     <div class="container">
       <div class="section-heading">
         <h2>About Me</h2>
         <div class="line-dec"></div>
         <span
-          >Hi, welcome to my webpage, I'm Ahmed Khalil, a software developer who lives in alexandria egypt, my main goal is to grow as a developer and learn something new everyday</span
+          >Hi, welcome to my webpage, I'm Ahmed Khalil, a software developer who
+          lives in alexandria egypt, my main goal is to grow as a developer and
+          learn something new everyday</span
         >
       </div>
       <div class="left-image-post">
         <div class="row">
-          <div class="col-md-6">
-            <div class="left-image">
-              <img src="assets/images/left-image.jpg" alt="" />
-            </div>
-          </div>
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="right-text">
-              <h4>Reflux HTML CSS Template</h4>
               <p>
-                Donec tristique feugiat lacus, at sollicitudin nunc euismod sed.
-                Mauris viverra, erat non sagittis gravida, elit dui mollis ante,
-                sit amet eleifend purus ligula eget eros. Sed tincidunt quam
-                vitae neque pharetra dignissim eget ut libero.
+                I graduated from abu qir high institute with a bachelor in
+                management information systems with a good grade in 2014, i
+                started studying software development in 2018-9-20, thats over
+                {{ duration() }} years now.
               </p>
-              <div class="white-button">
-                <a href="#">Read More</a>
-              </div>
             </div>
           </div>
         </div>
@@ -113,7 +109,7 @@
     </div>
   </section>
 
-  <section class="section my-services" data-section="section2">
+  <section class="section my-services" data-section="section2" #target2>
     <div class="container">
       <div class="section-heading">
         <h2>What I’m good at?</h2>
@@ -171,7 +167,7 @@
     </div>
   </section>
 
-  <section class="section my-work" data-section="section3">
+  <section class="section my-work" data-section="section3" #target3>
     <div class="container">
       <div class="section-heading">
         <h2>My Work</h2>
