@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,18 +7,16 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  duration = () => {
-    let day1 = new Date('2018-9-20');
-    let day2 = new Date();
-
-    let difference = day2.getTime() - day1.getTime();
-    let days = difference / (1000 * 3600 * 24);
-    return Math.floor(days / 365);
-  };
-  title = 'frontend';
+  title = 'Ahmed Khalil Portfolio';
   openOrClose: number = 1;
   date = new Date().getFullYear();
-  ngOnInit() {}
+
+  constructor(private service: DataService) {}
+  data: any;
+  ngOnInit() {
+    this.getDate();
+  }
+
   toggleNav() {
     if (this.openOrClose === 1) {
       this.openOrClose = 2;
@@ -31,5 +30,18 @@ export class AppComponent implements OnInit {
   }
   scroll(el: HTMLElement) {
     el.scrollIntoView();
+  }
+  duration = () => {
+    let day1 = new Date('2018-9-20');
+    let day2 = new Date();
+
+    let difference = day2.getTime() - day1.getTime();
+    let days = difference / (1000 * 3600 * 24);
+    return Math.floor(days / 365);
+  };
+  getDate() {
+    this.service.getData().subscribe((x: any) => {
+      this.data = x;
+    });
   }
 }

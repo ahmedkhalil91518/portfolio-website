@@ -424,38 +424,6 @@ button:hover {
     transition: all 0.5s;
 }
 
-.service-item .first-service-icon {
-    background-image: url(../assets/images/first-white-icon.png);
-}
-
-.service-item:hover .first-service-icon {
-    background-image: url(../assets/images/first-main-icon.png);
-}
-
-.service-item .second-service-icon {
-    background-image: url(../assets/images/second-white-icon.png);
-}
-
-.service-item:hover .second-service-icon {
-    background-image: url(../assets/images/second-main-icon.png);
-}
-
-.service-item .third-service-icon {
-    background-image: url(../assets/images/third-white-icon.png);
-}
-
-.service-item:hover .third-service-icon {
-    background-image: url(../assets/images/third-main-icon.png);
-}
-
-.service-item .fourth-service-icon {
-    background-image: url(../assets/images/fourth-white-icon.png);
-}
-
-.service-item:hover .fourth-service-icon {
-    background-image: url(../assets/images/fourth-main-icon.png);
-}
-
 
 /* My Work */
 
@@ -798,4 +766,10 @@ section.contact-me {
     .isotope-toolbar {
         margin-bottom: 20px;
     }
+}
+a {
+    color: white;
+}
+h4 a {
+    color: darkgoldenrod;
 }

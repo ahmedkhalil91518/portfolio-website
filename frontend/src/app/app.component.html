@@ -25,19 +25,29 @@
         <div class="social-network my-2">
           <ul class="soial-icons">
             <li>
-              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="https://github.com/ahmedkhalil91518"
+                ><i class="fa fa-github"></i
+              ></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-hackerrank"></i></a>
+              <a href="https://www.hackerrank.com/ahmedkhalil91518"
+                ><i class="fab fa-hackerrank"></i
+              ></a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/ahmed-khalil-027687212"
+                ><i class="fa fa-linkedin"></i
+              ></a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100066770663795"
+                ><i class="fa fa-facebook"></i
+              ></a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="https://twitter.com/AhmedKh69856643"
+                ><i class="fa fa-twitter"></i
+              ></a>
             </li>
           </ul>
         </div>
@@ -147,7 +157,7 @@
                 style="color: darkgoldenrod"
               ></i>
             </div>
-            <h4>Node.js, Express.js,  MongoDB &amp; MySQL</h4>
+            <h4>Node.js, Express.js, MongoDB &amp; MySQL</h4>
           </div>
         </div>
       </div>
@@ -159,133 +169,29 @@
       <div class="section-heading">
         <h2>My Work</h2>
         <div class="line-dec"></div>
-        <span
-          >Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit
-          amet. Duis ac elit vulputate, lobortis arcu quis, vehicula
-          mauris.</span
-        >
+        <span>these are my pinned github repos </span>
       </div>
-      <div class="row">
-        <div class="isotope-wrapper">
-          <form class="isotope-toolbar">
-            <label
-              ><input
-                type="radio"
-                data-type="*"
-                checked=""
-                name="isotope-filter"
-              />
-              <span>all</span></label
+      <div class="row" *ngIf="data">
+        <div
+          class="col-md-6"
+          *ngFor="let x of data.data.user.pinnedItems.edges"
+        >
+          <div class="service-item">
+            <h4>
+              <a [href]="x.node.url" target="_blank">{{ x.node.name }}</a>
+            </h4>
+            <p>{{ x.node.description }}</p>
+            <span
+              *ngFor="let y of x.node.repositoryTopics.nodes"
+              class="badge bg-secondary mx-2"
+              >{{ y.topic.name }}</span
             >
-            <label
-              ><input type="radio" data-type="people" name="isotope-filter" />
-              <span>people</span></label
+            <a
+              *ngIf="x.node.homepageUrl"
+              [href]="x.node.homepageUrl"
+              class="badge bg-secondary d-block m-2"
+              >link to the website</a
             >
-            <label
-              ><input type="radio" data-type="nature" name="isotope-filter" />
-              <span>nature</span></label
-            >
-            <label
-              ><input type="radio" data-type="animals" name="isotope-filter" />
-              <span>animals</span></label
-            >
-          </form>
-          <div class="isotope-box">
-            <div class="isotope-item" data-type="nature">
-              <figure class="snip1321">
-                <img src="assets/images/portfolio-01.jpg" alt="sq-sample26" />
-                <figcaption>
-                  <a
-                    href="assets/images/portfolio-01.jpg"
-                    data-lightbox="image-1"
-                    data-title="Caption"
-                    ><i class="fa fa-search"></i
-                  ></a>
-                  <h4>First Title</h4>
-                  <span>free to use our template</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="isotope-item" data-type="people">
-              <figure class="snip1321">
-                <img src="assets/images/portfolio-02.jpg" alt="sq-sample26" />
-                <figcaption>
-                  <a
-                    href="assets/images/portfolio-02.jpg"
-                    data-lightbox="image-1"
-                    data-title="Caption"
-                    ><i class="fa fa-search"></i
-                  ></a>
-                  <h4>Second Title</h4>
-                  <span>please tell your friends</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="isotope-item" data-type="animals">
-              <figure class="snip1321">
-                <img src="assets/images/portfolio-03.jpg" alt="sq-sample26" />
-                <figcaption>
-                  <a
-                    href="assets/images/portfolio-03.jpg"
-                    data-lightbox="image-1"
-                    data-title="Caption"
-                    ><i class="fa fa-search"></i
-                  ></a>
-                  <h4>Item Third</h4>
-                  <span>customize anything</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="isotope-item" data-type="people">
-              <figure class="snip1321">
-                <img src="assets/images/portfolio-04.jpg" alt="sq-sample26" />
-                <figcaption>
-                  <a
-                    href="assets/images/portfolio-04.jpg"
-                    data-lightbox="image-1"
-                    data-title="Caption"
-                    ><i class="fa fa-search"></i
-                  ></a>
-                  <h4>Item Fourth</h4>
-                  <span>Re-distribution not allowed</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="isotope-item" data-type="nature">
-              <figure class="snip1321">
-                <img src="assets/images/portfolio-05.jpg" alt="sq-sample26" />
-                <figcaption>
-                  <a
-                    href="assets/images/portfolio-05.jpg"
-                    data-lightbox="image-1"
-                    data-title="Caption"
-                    ><i class="fa fa-search"></i
-                  ></a>
-                  <h4>Fifth Awesome</h4>
-                  <span>Ut sollicitudin risus</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="isotope-item" data-type="animals">
-              <figure class="snip1321">
-                <img src="assets/images/portfolio-06.jpg" alt="sq-sample26" />
-                <figcaption>
-                  <a
-                    href="assets/images/portfolio-06.jpg"
-                    data-lightbox="image-1"
-                    data-title="Caption"
-                    ><i class="fa fa-search"></i
-                  ></a>
-                  <h4>Awesome Sixth</h4>
-                  <span>Donec eget massa ante</span>
-                </figcaption>
-              </figure>
-            </div>
           </div>
         </div>
       </div>

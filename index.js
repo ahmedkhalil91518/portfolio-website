@@ -1,9 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const fetch = require("node-fetch");
+//const cors = require('cors')
 
 const app = express();
 const accessToken = process.env.ACCESSKEY;
+
+//app.use(cors())
+app.use(express.static('frontend/dist/frontend'))
 
 app.listen(3000, () => console.log("Listening on port 3000 .... "));
 
