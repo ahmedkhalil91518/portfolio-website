@@ -5,11 +5,12 @@ const fetch = require("node-fetch");
 
 const app = express();
 const accessToken = process.env.ACCESSKEY;
+const port = process.env.PORT;
 
 //app.use(cors())
 app.use(express.static('frontend/dist/frontend'))
 
-app.listen(3000, () => console.log("Listening on port 3000 .... "));
+app.listen(port, () => console.log("Listening on port 3000 .... "));
 
 app.get("/api", (req, res) => {
   fetch("https://api.github.com/graphql", {
